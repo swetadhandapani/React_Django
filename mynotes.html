@@ -1,0 +1,63 @@
+<!-- This is a comment section 
+
+Since this is my first Django project, I want some notes to help me remember the steps I took to set up the project.
+ 
+------Django v5.2 (Default port=> http://127.0.0.1:8000/)  [project folder], Python v3.11.9------
+
+1. DJANGO BACKEND SETUP
+# Create and enter project folder
+mkdir react-django
+cd react-django
+
+# Initialize pipenv and install Django
+pipenv install django djangorestframework
+
+# Activate virtual environment
+pipenv shell
+
+# Start Django project
+django-admin startproject project
+
+# Navigate into Django project
+cd project
+
+# Start a Django app (optional, but common)
+python manage.py startapp your_app_name
+
+# Make migrations
+python manage.py makemigrations
+python manage.py migrate
+
+# Run Django server
+python manage.py runserver
+
+2.FIXES FOR DJANGO 5.2
+Avoid using from django.conf.urls import url (deprecated)
+
+Use path() and re_path() from django.urls instead.
+
+
+
+
+------React v19.1.0 (Default port=>  http://localhost:3000) [frontend folder] ------
+
+3.USING CRA (Create React App) FOR REACT SETUP (DEPRECATED BUT STILL WORKS)
+npx create-react-app frontend
+cd frontend
+npm start
+
+
+-------CONNECTING REACT TO DJANGO BACKEND-------
+In Django views (APIView), accept and return JSON using rest_framework.
+
+Use axios or fetch in React to make HTTP requests to Django.
+
+
+------RUNNING THE PROJECT------
+
+python manage.py runserver    (Django backend , PORT 8000)
+npm start                     (React frontend , PORT 3000)
+
+
+-->
+
